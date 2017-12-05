@@ -1,19 +1,23 @@
 package de.predic8.workshop.checkout.dto;
 
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.math.BigDecimal;
 
 public class Article {
+	private static Logger log = LoggerFactory.getLogger(Article.class);
+
 	private String article;
 	private long quantity;
-	private BigDecimal price;
 
 	public Article() {
 	}
 
-	public Article(String article, long quantity, BigDecimal price) {
+	public Article(String article, long quantity) {
 		this.article = article;
 		this.quantity = quantity;
-		this.price = price;
 	}
 
 	public String getArticle() {
@@ -24,15 +28,7 @@ public class Article {
 		return this.quantity;
 	}
 
-	public BigDecimal getPrice() {
-		return this.price;
-	}
-
-	public void setPrice(BigDecimal price) {
-		this.price = price;
-	}
-
 	public String toString() {
-		return "Article(article=" + article + ", quantity=" + quantity + ", price=" + price + ")";
+		return "Article(article=" + article + ", quantity=" + quantity;
 	}
 }

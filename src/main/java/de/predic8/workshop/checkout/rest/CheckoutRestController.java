@@ -39,7 +39,7 @@ public class CheckoutRestController {
 
 		String uuid = UUID.randomUUID().toString();
 		basket.setUuid(uuid);
-		basket.getItems().forEach(i -> i.setPrice(prices.get(i.getArticle())));
+		//basket.getItems().forEach(i -> i.setPrice(prices.get(i.getArticle())));
 
 		kafkaTemplate.send("shop", new Operation("basket", "create", objectMapper.valueToTree(basket)));
 
