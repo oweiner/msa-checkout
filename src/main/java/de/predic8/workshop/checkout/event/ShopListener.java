@@ -3,7 +3,6 @@ package de.predic8.workshop.checkout.event;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Map;
 

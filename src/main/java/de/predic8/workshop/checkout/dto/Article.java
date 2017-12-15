@@ -1,10 +1,7 @@
 package de.predic8.workshop.checkout.dto;
 
-import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.math.BigDecimal;
 
 public class Article {
 	private static Logger log = LoggerFactory.getLogger(Article.class);
