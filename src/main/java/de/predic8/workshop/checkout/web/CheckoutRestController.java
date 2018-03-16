@@ -34,7 +34,7 @@ public class CheckoutRestController {
 	}
 
 	@PostMapping("/checkouts")
-		public ResponseEntity<BasketIdentifier> save(@RequestBody Basket basket) throws Exception {
+	public ResponseEntity<BasketIdentifier> save(@RequestBody Basket basket) throws Exception {
 
 		if (!checkoutService.areArticlesAvailable(basket)) {
 			return ResponseEntity.status(HttpStatus.CONFLICT).build();
