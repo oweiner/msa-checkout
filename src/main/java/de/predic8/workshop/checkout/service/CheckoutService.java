@@ -35,8 +35,8 @@ public class CheckoutService {
 		);
 	}
 
-	public boolean areArticlesAvailableFallback(Basket basket) {
-
+	public boolean areArticlesAvailableFallback(Basket basket, Throwable t) {
+		// TODO use the Throwable to get the reason for the wrapped call to fail
 		Map<String,Object> entries = new HashMap();
 		entries.put("fallback", "Sending Basket: " + basket);
 
